@@ -4,12 +4,11 @@ In your project's Gruntfile, add a section named `clean` to the data object pass
 
 ```js
 grunt.initConfig({
-  concat: {
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+  clean: {
+    your_target: [/* files to delete */],
+    ...
   },
 })
 ```
 
-*Due to the destructive nature of this task, always be cautious of the paths you clean.*
+_Due to the destructive nature of this task, always be cautious of the paths you clean._
