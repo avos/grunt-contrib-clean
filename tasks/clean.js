@@ -11,11 +11,6 @@
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('clean', 'Clean files and folders.', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options();
-
-    grunt.verbose.writeflags(options, 'Options');
-
     // Clean specified files / dirs.
     var files = grunt.file.expand(grunt.util._.pluck(this.files, 'src'));
     files.forEach(function(filepath) {
