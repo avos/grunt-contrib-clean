@@ -1,55 +1,13 @@
-# grunt-contrib-clean
-> Clear files and folders (part of the [grunt-contrib](/gruntjs/grunt-contrib) collection).  Submitted by [Tim Branyen](/tbranyen).
+# grunt-contrib-clean [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-contrib-clean.png?branch=master)](http://travis-ci.org/gruntjs/grunt-contrib-clean)
 
-## Getting Started
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-contrib-clean`
+> Clear files and folders.
 
-Then add this line to your project's `grunt.js` gruntfile:
+_Note that this plugin has not yet been released, and only works with the latest bleeding-edge, in-development version of grunt. See the [When will I be able to use in-development feature 'X'?](https://github.com/gruntjs/grunt/blob/devel/docs/faq.md#when-will-i-be-able-to-use-in-development-feature-x) FAQ entry for more information._
 
-```javascript
-grunt.loadNpmTasks('grunt-contrib-clean');
-```
 
-[grunt]: https://github.com/cowboy/grunt
-[getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
+## Release History
 
-### Overview
-
-Inside your `grunt.js` file, add a section named `clean`.
-
-*Due to the destructive nature of this task, always be cautious of the paths you clean.*
-
-### Config Examples
-
-There are three formats you can use to run this task.
-
-##### Short
-
-``` javascript
-clean: ["path/to/dir/one", "path/to/dir/two"]
-```
-
-##### Medium (specific targets with global options)
-
-``` javascript
-clean: {
-  build: ["path/to/dir/one", "path/to/dir/two"],
-  release: ["path/to/another/dir/one", "path/to/another/dir/two"]
-},
-```
-
-##### Long (specific targets with per target options)
-
-``` javascript
-clean: {
-  build: {
-    src: ["path/to/dir/one", "path/to/dir/two"]
-  }
-}
-```
-
-#### Parameters
-
-##### src ```string```
-
-This defines what paths this task will clean recursively (supports [grunt.template](https://github.com/cowboy/grunt/blob/master/docs/api_template.md) and [minimatch](https://github.com/isaacs/minimatch)).
+ * 2012-10-17 - v0.4.0a - Work in progress for the upcoming grunt 0.4.0, not yet officially released.
+ * 2012-10-11 - v0.3.1 - Rename grunt-contrib-lib dep to grunt-lib-contrib.
+ * 2012-09-22 - v0.3.0 - Options no longer accepted from global config key.
+ * 2012-09-09 - v0.2.0 - Refactored from grunt-contrib into individual repo.
