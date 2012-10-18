@@ -14,6 +14,11 @@ module.exports = function(grunt) {
     // Clean specified files / dirs.
     var files = grunt.file.expand(grunt.util._.pluck(this.files, 'src'));
     files.forEach(function(filepath) {
+      // Warn if a source file/pattern was invalid.
+      if (!grunt.file.exists(filepath)) {
+        grunt.log.error('Source path "' + filepath + '" not found.');
+        return '';
+      }
       grunt.log.write('Cleaning "' + filepath + '"...');
       try {
         grunt.file.delete(filepath);
