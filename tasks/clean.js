@@ -11,20 +11,22 @@
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('clean', 'Clean files and folders.', function() {
+    // Merge task-specific and/or target-specific options with these defaults.
+    console.log(this)
+    //var options = this.options();
+
+    //grunt.verbose.writeflags(options, 'Options');
+
     // Clean specified files / dirs.
-    var files = grunt.file.expand(grunt.util._.pluck(this.files, 'src'));
-    files.forEach(function(filepath) {
-      // Warn if a source file/pattern was invalid.
-      if (!grunt.file.exists(filepath)) {
-        grunt.log.error('Source path "' + filepath + '" not found.');
-        return '';
-      }
+    this.file.src.forEach(function(filepath) {
       grunt.log.write('Cleaning "' + filepath + '"...');
       try {
+        console.log(grunt.file)
         grunt.file.delete(filepath);
         grunt.log.ok();
       } catch (e) {
-        grunt.log.error();
+        console.log(e)
+        //grunt.log.error();
         grunt.verbose.error(e);
         grunt.fail.warn('Clean operation failed.');
       }
